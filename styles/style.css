@@ -11,18 +11,12 @@
   flex-direction: column;
 }
 
-.background-figure {
-   background-color: #2f80ed;
- }
-
 .header {
   max-height: 756px;
   min-height: 600px;
   height: 100vh;
   display: flex;
   position: relative;
-  /* выше установили ограничения для секции */
-  overflow: hidden;
   background-color: #f2f2f2;
   color: #000;
   padding-left: 64px;
@@ -45,6 +39,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  background-color: #2f80ed;
 }
 
 .logo {
@@ -78,16 +73,15 @@
   z-index: 1000;
 }
 
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   margin-top: 80px;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_light {
-  width: 250px;
-  margin-top: 60px;
 }
 
 .link {
@@ -106,9 +100,6 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
-}
-
-.two-columns_position {
   margin: 0 auto;
 }
 
@@ -167,7 +158,8 @@
   line-height: 1.15;
   margin: 0;
 }
-.theme_dark{
+
+.section-title_theme_dark {
   color: #fff;
 }
 
@@ -177,11 +169,11 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin: 0;
+  margin: 20px 0 0;
 }
 
-.section-subtitle_position {
-  margin-top: 20px;
+.section-subtitle_theme_dark {
+  color: #fff;
 }
 
 .table {
@@ -192,11 +184,19 @@
   z-index: 2;
 }
 
+.table_theme_dark {
+  color: #fff;
+}
+
 .table__text {
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
   margin: 20px 0 0 0;
+}
+
+.table__text_theme_dark {
+  color: #fff;
 }
 
 .table__heading {
@@ -206,10 +206,11 @@
   margin: 0;
 }
 
+.table__heading_theme_dark {
+  color: #fff;
+}
+
 .feynman {
-  background-image: url("../images/feynman.png");
-  background-repeat: no-repeat;
-  background-position: bottom left;
   background-size: 867px 637px;
   position: relative;
   text-align: center;
@@ -217,7 +218,7 @@
   box-sizing: border-box;
   margin-top: 100px;
   padding-top: 100px;
-  background-color: #f2f2f2;
+  background: #f2f2f2 url("../images/feynman.png") no-repeat bottom left;
   color: #000;
 }
 
@@ -229,26 +230,22 @@
 .feynman__title {
   width: 648px;
   margin: 0 auto;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
 }
 
 .feynman__subtitle {
   margin: 70px 0 0 0;
   font-weight: normal;
+  line-height: 51px;
+  font-size: 36px;
 }
 
 .feynman__link {
   position: absolute;
   top: 50%;
   right: 48px;
-}
-
-.feynman__title__content {
-  line-height: 1.15;
-  font-size: 120px;
-  font-weight: bold;
-}
-
-.feynman__content {
   line-height: 51px;
   font-size: 36px;
 }
@@ -284,6 +281,8 @@
   min-height: 350px;
   display: flex;
   box-sizing: border-box;
+  /* Внутренний отступ слева в 64px необходим для выполнения следующего требования по брифу*/
+  /* Контент идет по сетке и логотип в шапке и подвале находится на одном уровне. */
   padding: 60px 0 40px 64px;
   background-color: #1f1f1f;
   color: #fff;
@@ -308,7 +307,6 @@
 
 .logo_place_footer {
   height: 35px;
-  background-image: url("../images/logo_place_footer.svg");
   background-size: cover;
 }
 
