@@ -281,9 +281,7 @@
   min-height: 350px;
   display: flex;
   box-sizing: border-box;
-  /* Внутренний отступ слева в 64px необходим для выполнения следующего требования по брифу*/
-  /* Контент идет по сетке и логотип в шапке и подвале находится на одном уровне. */
-  padding: 60px 0 40px 64px;
+  padding: 60px 0 40px 0;
   background-color: #1f1f1f;
   color: #fff;
 }
@@ -293,6 +291,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 90%;
+  margin: 0 auto;
 }
 
 .footer__column-links {
