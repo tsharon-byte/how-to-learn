@@ -2,4 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 240px;
+  margin-right: 100px;
+}
+.cards__item:nth-of-type(3){
+  margin-right: 0;
 }
