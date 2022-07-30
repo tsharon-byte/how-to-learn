@@ -1,4 +1,5 @@
 # Практическая работа №2 
+https://tsharon-byte.github.io/how-to-learn/
 ## Курс '*Веб разработчик*' от [Yandex.Практикум](https://practicum.yandex.ru "Yandex.Практикум")
 В данной работе применяются на практике следующие темы:
 1. БЭМ
